@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo-nuevo.png" type="image/png">
+    <title>Contacto | Global Talent</title>
+    <!--Icons CDN-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <!--Swiper JS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <nav>
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/logo-nuevo.png" alt="Navbar Logo">
+            </a>
+            <ul class="nav__menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Nosotros</a></li>
+                <li><a href="index.html">Servicios</a></li>
+                <li class="nav__item--has-submenu">
+                    <a href="index.html">Servicio al Cliente</a>
+                    <ul class="nav__submenu">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="pqrs.html">PQRS</a></li>
+                        <li><a href="encuesta.html">Encuesta</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Identidad</a></li>
+                <li><a href="index.html">FAQ</a></li>
+            </ul>
+            <div class="nav__buttons">
+                <button class="nav__toggle-theme-btn"><i class='bx bx-moon' ></i></button>
+                <button class="nav__toggle-open"><i class='bx bx-menu' ></i></button>
+                <button class="nav__toggle-close"><i class='bx bx-x'></i></button>
+            </div>
+        </div>
+    </nav>
+    <!--Fin De Nav-->
+
+
+    <section class="contact" id="contacto">
+        <h1>Contacto</h1>
+        <p>Aquí podrás ponerte en contacto con nosotros</p>
+        <div class="container contact__container">
+            <div class="contact__info">
+                <ul class="contact__list">
+                    <li><a href="mailto:servicio.globaltalent@gmail.com" class="contact__list-item" target="_blank">
+                        <i class='bx bxl-gmail'></i>
+                    </a></li>
+                    <li><a href="https://www.instagram.com/serv.global.t/?igsh=MXhmbHFpOWZsMDlqcg%3D%3D" class="contact__list-item" target="_blank">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a></li>
+                    <li><a href="https://wa.me/+573105562130" class="contact__list-item" target="_blank">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a></li>
+                    <li><a href ="tel:+573105562130" class="contact__list-item" target="_blank">
+                        <i class="bx bx-phone-call"></i>
+                    </a></li>
+                </ul>
+                <div class="contact__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4146.589709938058!2d-75.70215059624088!3d4.811833835455053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38874fecb5c80d%3A0xe2ea252ec17f3dd7!2sSENA%20-%20Centro%20Agropecuario%20y%20de%20Comercio%20y%20Servicios.!5e1!3m2!1ses!2sco!4v1717977663812!5m2!1ses!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <form action="https://formsubmit.co/servicio.globaltalent@gmail.com" method="POST" class="contact__form">
+                <input type="text" name="Name" placeholder="Nombres y Apellidos">
+                <input type="email" name="Email" placeholder="Correo electrónico">
+                <input type="text" name="solicitante_celular" placeholder="Número de Celular" required>
+                <textarea rows="7" name="Message" placeholder="Mensaje"></textarea>
+                
+                <div class="terms">
+                    <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+                    <label for="acceptTerms">He leído y acepto los <a href="terminos-y-condiciones.html" target="_blank">términos y 
+                    condiciones</a> y la <a href="politica-privacidad.html" target="_blank">política de privacidad</a>.</label>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>    
+    <!--Fin de Contacto-->
+
+    
+    <footer>
+        <div class="container footer__container">
+            <ul class="footer__menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Nosotros</a></li>
+                <li><a href="index.html">Servicios</a></li>
+                <li><a href="index.html">Identidad</a></li>
+                <li class="nav__item--has-submenu">
+                    <a href="#">Servicio al Cliente</a>
+                    <ul class="nav__submenu">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="pqrs.html">PQRS</a></li>
+                        <li><a href="encuesta.html">Encuesta</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">FAQ</a></li>
+            </ul>
+            <ul class="footer__socials">
+                <li><a href="https://instagram.com/" target="_blank"><i class='bx bxl-instagram-alt'></i></a></li>
+                <li><a href="https://web.whatsapp.com/" target="_blank"><i class='bx bxl-whatsapp'></i></a></li>
+                <li><a href="mailto:servicio.globaltalent@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a></li>
+            </ul>
+            <ul class="footer__legal">
+                <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+                <li><a href="politicas-cookies.html">Política de Cookies</a></li>
+                <li><a href="terminos-uso.html">Términos de Uso</a></li>
+                <li><a href="terminos-servicio.html">Términos de Servicio</a></li>
+            </ul>
+        </div>
+        <div class="footer__copyright">
+            <small>2024 Global Talent &copy; Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <!--Fin de Footer-->
+
+    <div class="chatbot-container">
+        <div id="chatbotButton" class="chatbot-button">
+            <i class='bx bxs-chat'></i> Chat Bot
+        </div>
+        <div id="chatbotPanel" class="chatbot-panel">
+            <div class="chatbot-header">
+                <span>Chat Bot | Global Talent</span>
+                <i class='bx bx-x' id="closeChat"></i>
+            </div>
+            <div class="chatbot-body">
+                <div id="chatMessages" class="chat-messages"></div>
+                <input type="text" id="chatInput" placeholder="Escribe un mensaje...">
+            </div>
+        </div>
+    </div>
+    <!-- Fin de Botón de Chat Bot y Panel -->
+
+    <script>
+        // Chat Bot //
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotButton = document.getElementById('chatbotButton');
+            const chatbotPanel = document.getElementById('chatbotPanel');
+            const closeChat = document.getElementById('closeChat');
+            const chatMessages = document.getElementById('chatMessages');
+            const chatInput = document.getElementById('chatInput');
+
+            const welcomeMessage = "Bienvenido a Global Talent. ¿En que te podemos ayudar?";
+
+            chatbotButton.addEventListener('click', function() {
+                chatbotPanel.style.display = 'flex';
+                addMessage(welcomeMessage, 'bot');
+            });
+
+            closeChat.addEventListener('click', function() {
+                chatbotPanel.style.display = 'none';
+            });
+
+            chatInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    const userMessage = chatInput.value;
+                    addMessage(userMessage, 'user');
+                    chatInput.value = '';
+
+                    // Aquí puedes integrar la lógica de IA para responder al mensaje del usuario
+                    getBotResponse(userMessage);
+                }
+            });
+
+            function addMessage(message, sender) {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('chat-message', sender);
+                messageElement.textContent = message;
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function getBotResponse(userMessage) {
+                // Simulamos una respuesta del bot (aquí se integraría la lógica de IA)
+                const botMessage = "Esto es una respuesta automática. Estamos trabajando en tu solicitud.";
+                addMessage(botMessage, 'bot');
+            }
+        });
+    </script>
+    <!-- Fin JS de Botón de Chat Bot y Panel -->
+
+
+
+    <script src="mix/dist/mixitup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

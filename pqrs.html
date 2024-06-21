@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo-nuevo.png" type="image/png">
+    <title>PQRS | Global Talent</title>
+    <!--Icons CDN-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <!--Swiper JS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <nav>
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/logo-nuevo.png" alt="Navbar Logo">
+            </a>
+            <ul class="nav__menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Nosotros</a></li>
+                <li><a href="index.html">Servicios</a></li>
+                <li class="nav__item--has-submenu">
+                    <a href="#">Servicio al Cliente</a>
+                    <ul class="nav__submenu">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="pqrs.html">PQRS</a></li>
+                        <li><a href="encuesta.html">Encuesta</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Identidad</a></li>
+                <li><a href="index.html">FAQ</a></li>
+            </ul>
+            <div class="nav__buttons">
+                <button class="nav__toggle-theme-btn"><i class='bx bx-moon' ></i></button>
+                <button class="nav__toggle-open"><i class='bx bx-menu' ></i></button>
+                <button class="nav__toggle-close"><i class='bx bx-x'></i></button>
+            </div>
+        </div>
+    </nav>
+    <!--Fin De Nav-->
+
+
+    <section class="pqrs" id="pqrs">
+        <h1>PQRS</h1>
+        <p>Por favor complete el siguiente formulario para enviar su Petición, Queja, Reclamo, Sugerencia, 
+        Felicitación, Denuncia y Tutela.
+        </p>
+        <div class="container pqrs__container">
+            <form action="https://formsubmit.co/servicio.globaltalent@gmail.com" method="POST" class="pqrs__form" enctype="multipart/form-data">
+                <h2>Datos del Solicitante</h2>
+                <input type="text" name="solicitante_nombre" placeholder="Nombres y Apellidos" required>
+                <select name="tipo_documento" required>
+                    <option value="">Seleccione el tipo de documento</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                </select>
+                <input type="text" name="solicitante_documento" placeholder="Número de Documento" required>
+                <input type="email" name="solicitante_email" placeholder="Correo Electrónico" required>
+                <input type="text" name="solicitante_direccion" placeholder="Dirección" required>
+                <input type="text" name="solicitante_celular" placeholder="Número de Celular" required>
+
+                <h2>Datos del Apoderado (si aplica)</h2>
+                <input type="text" name="apoderado_nombre" placeholder="Nombres y Apellidos">
+                <select name="apoderado_tipo_documento">
+                    <option value="">Seleccione el tipo de documento</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                </select>
+                <input type="text" name="apoderado_documento" placeholder="Número de Documento">
+                <input type="text" name="apoderado_celular" placeholder="Número de Celular">
+                <input type="email" name="solicitante_email" placeholder="Correo Electrónico" required>
+                <input type="text" name="solicitante_direccion" placeholder="Dirección" required>
+
+                <h2>Tipo de Requerimiento</h2>
+                <select name="tipo_requerimiento" id="tipo_requerimiento" required>
+                    <option value="">Seleccione el tipo de requerimiento</option>
+                    <option value="peticion">Petición</option>
+                    <option value="queja">Queja</option>
+                    <option value="reclamo">Reclamo</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="felicitacion">Felicitación</option>
+                    <option value="denuncia">Denuncnia</option>
+                    <option value="tutela">Tutela</option>
+                </select>
+                <p id="tipo_requerimiento_descripcion" style="font-style: arial;"></p>
+
+                <h2>Número de Documentos Adjuntos</h2>
+                <select name="numero_documentos" required>
+                    <option value="">Seleccione la cantidad de documentos adjuntos</option>
+                    <option value="ninguno">Ninguno</option>
+                    <option value="uno">Uno</option>
+                    <option value="dos">Dos</option>
+                    <option value="tres">Tres</option>
+                    <option value="mas">Más</option>
+                </select>
+
+                <h2>Adjuntar Documentos</h2>
+                <input type="file" name="documentos_adjuntos" multiple>
+
+                <h2>Descripción del Solicitante</h2>
+                <textarea rows="7" name="descripcion_solicitante" placeholder="Descripción" required></textarea>
+
+                <div class="terms-pqrs">
+                    <label for="acceptTermsPQRSF">
+                        <input type="checkbox" id="acceptTermsPQRSF" name="acceptTermsPQRSF" required>
+                        He leído y acepto los <a href="terminos-y-condiciones.html" target="_blank">términos y 
+                        condiciones</a> y la <a href="politica-privacidad.html" target="_blank">política de privacidad</a>.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!--Fin de PQRS-->
+
+
+    <footer>
+        <div class="container footer__container">
+            <ul class="footer__menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Nosotros</a></li>
+                <li><a href="index.html">Servicios</a></li>
+                <li><a href="index.html">Identidad</a></li>
+                <li class="nav__item--has-submenu">
+                    <a href="#">Servicio al Cliente</a>
+                    <ul class="nav__submenu">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="pqrs.html">PQRS</a></li>
+                        <li><a href="encuesta.html">Encuesta</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">FAQ</a></li>
+            </ul>
+            <ul class="footer__socials">
+                <li><a href="https://instagram.com/" target="_blank"><i class='bx bxl-instagram-alt'></i></a></li>
+                <li><a href="https://web.whatsapp.com/" target="_blank"><i class='bx bxl-whatsapp'></i></a></li>
+                <li><a href="mailto:servicio.globaltalent@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a></li>
+            </ul>
+            <ul class="footer__legal">
+                <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+                <li><a href="politicas-cookies.html">Política de Cookies</a></li>
+                <li><a href="terminos-uso.html">Términos de Uso</a></li>
+                <li><a href="terminos-servicio.html">Términos de Servicio</a></li>
+            </ul>
+        </div>
+        <div class="footer__copyright">
+            <small>2024 Global Talent &copy; Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <!--Fin de Footer-->
+
+    <div class="chatbot-container">
+        <div id="chatbotButton" class="chatbot-button">
+            <i class='bx bxs-chat'></i> Chat Bot
+        </div>
+        <div id="chatbotPanel" class="chatbot-panel">
+            <div class="chatbot-header">
+                <span>Chat Bot | Global Talent</span>
+                <i class='bx bx-x' id="closeChat"></i>
+            </div>
+            <div class="chatbot-body">
+                <div id="chatMessages" class="chat-messages"></div>
+                <input type="text" id="chatInput" placeholder="Escribe un mensaje...">
+            </div>
+        </div>
+    </div>
+    <!-- Fin de Botón de Chat Bot y Panel -->
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const tipoRequerimiento = document.getElementById('tipo_requerimiento');
+        const descripcion = document.getElementById('tipo_requerimiento_descripcion');
+
+        const descripciones = {
+            peticion: "Es toda expresión de propuesta o soliciutd de información que cualquier persona requiera.",
+            queja: "Es la manifestación de desacuerdo, insatisfacción o descontento al recibir una atención inadecuada por parte de un servicio.",
+            reclamo: "Es la manifestación verbal o escrita de insatisfacción hecha por una persona sobre el incumplimiento o irregularidad de alguna de las características del servicio.",
+            sugerencia: "Es la manifestación de una idea o propuesta para mejorar el servicio o la gestión.",
+            felicitacion: "Es la manifestación que expresa el agrado o satisfacción frente al servicio brindado.",
+            denuncia: "Es el acto mediante el cual una persona informa una situación que considera irregular o injusta.",
+            tutela: "Es el proceso legal que garantiza la protección de sus derechos fundamentales en situaciones donde se vean amenazados o vulnerados."
+        };
+
+        tipoRequerimiento.addEventListener('change', function() {
+            const seleccion = tipoRequerimiento.value;
+            descripcion.textContent = descripciones[seleccion] || '';
+        });
+    });
+    // Chat Bot //
+    document.addEventListener('DOMContentLoaded', function() {
+            const chatbotButton = document.getElementById('chatbotButton');
+            const chatbotPanel = document.getElementById('chatbotPanel');
+            const closeChat = document.getElementById('closeChat');
+            const chatMessages = document.getElementById('chatMessages');
+            const chatInput = document.getElementById('chatInput');
+
+            const welcomeMessage = "Bienvenido a Global Talent. ¿En que te podemos ayudar?";
+
+            chatbotButton.addEventListener('click', function() {
+                chatbotPanel.style.display = 'flex';
+                addMessage(welcomeMessage, 'bot');
+            });
+
+            closeChat.addEventListener('click', function() {
+                chatbotPanel.style.display = 'none';
+            });
+
+            chatInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    const userMessage = chatInput.value;
+                    addMessage(userMessage, 'user');
+                    chatInput.value = '';
+
+                    // Aquí puedes integrar la lógica de IA para responder al mensaje del usuario
+                    getBotResponse(userMessage);
+                }
+            });
+
+            function addMessage(message, sender) {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('chat-message', sender);
+                messageElement.textContent = message;
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function getBotResponse(userMessage) {
+                // Simulamos una respuesta del bot (aquí se integraría la lógica de IA)
+                const botMessage = "Esto es una respuesta automática. Estamos trabajando en tu solicitud.";
+                addMessage(botMessage, 'bot');
+            }
+        });
+    </script>
+    <!--Fin de JS PQRS / Chat Bot y Panel-->
+
+
+    <script src="mix/dist/mixitup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

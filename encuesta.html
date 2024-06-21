@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo-nuevo.png" type="image/png">
+    <title>Encuesta de Satisfacción | Global Talent</title>
+    <!--Icons CDN-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!--Swiper JS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <nav>
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/logo-nuevo.png" alt="Navbar Logo">
+            </a>
+            <ul class="nav__menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Nosotros</a></li>
+                <li><a href="index.html">Servicios</a></li>
+                <li class="nav__item--has-submenu">
+                    <a href="#">Servicio al Cliente</a>
+                    <ul class="nav__submenu">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="pqrs.html">PQRS</a></li>
+                        <li><a href="encuesta.html">Encuesta</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Identidad</a></li>
+                <li><a href="index.html">FAQ</a></li>
+            </ul>
+            <div class="nav__buttons">
+                <button class="nav__toggle-theme-btn"><i class='bx bx-moon'></i></button>
+                <button class="nav__toggle-open"><i class='bx bx-menu'></i></button>
+                <button class="nav__toggle-close"><i class='bx bx-x'></i></button>
+            </div>
+        </div>
+    </nav>
+    <!--Fin De Nav-->
+
+    <section class="survey" id="survey">
+        <h1>Encuesta de Satisfacción al Cliente</h1>
+        <p>Por favor complete la siguiente encuesta para ayudarnos a mejorar nuestro servicio.</p>
+        <div class="container survey__container">
+            <form action="https://formsubmit.co/servicio.globaltalent@gmail.com" method="POST" class="survey__form" enctype="multipart/form-data">
+                <h2>Datos del Cliente</h2>
+                <input type="text" name="cliente_nombre" placeholder="Nombres y Apellidos" required>
+                <input type="email" name="cliente_email" placeholder="Correo Electrónico" required>
+    
+                <h2>Encuesta de Satisfacción</h2>
+                <div class="survey__question">
+                    <p>1. ¿Qué tan agradable fue su experiencia con nuestro servicio?</p>
+                    <label>
+                        <input type="radio" name="calidad_servicio" value="muy_satisfecho" required>
+                        Muy satisfecho
+                    </label>
+                    <label>
+                        <input type="radio" name="calidad_servicio" value="satisfecho">
+                        Satisfecho
+                    </label>
+                    <label>
+                        <input type="radio" name="calidad_servicio" value="poco_satisfecho">
+                        Poco satisfecho
+                    </label>
+                    <label>
+                        <input type="radio" name="calidad_servicio" value="nada_satisfecho">
+                        Nada satisfecho
+                    </label>
+                </div>
+                <div class="survey__question">
+                    <p>2. ¿Cómo calificaría la calidad de la atención recibida?</p>
+                    <label>
+                        <input type="radio" name="atencion_cliente" value="muy_buena" required>
+                        Muy buena
+                    </label>
+                    <label>
+                        <input type="radio" name="atencion_cliente" value="buena">
+                        Buena
+                    </label>
+                    <label>
+                        <input type="radio" name="atencion_cliente" value="regular">
+                        Regular
+                    </label>
+                    <label>
+                        <input type="radio" name="atencion_cliente" value="nada">
+                        Nada
+                    </label>
+                </div>
+                <div class="survey__question">
+                    <p>3. ¿El proceso para agendar la cita le resultó fácil y rápida?</p>
+                    <label>
+                        <input type="radio" name="recomendacion" value="si" required>
+                        Sí
+                    </label>
+                    <label>
+                        <input type="radio" name="recomendacion" value="no">
+                        No
+                    </label>
+                </div>
+                <div class="survey__question">
+                    <p>4. ¿Le resultó fácil la utilización de la página web?</p>
+                    <label>
+                        <input type="radio" name="calidad_precio" value="si" required>
+                        Sí
+                    </label>
+                    <label>
+                        <input type="radio" name="calidad_precio" value="no">
+                        No
+                    </label>
+                </div>
+                <div class="survey__question">
+                    <p>5. ¿Está interesado en recibir nueva información sobre nuestros futuros servicios?</p>
+                    <label>
+                        <input type="radio" name="volveria_utilizar" value="si" required>
+                        Sí
+                    </label>
+                    <label>
+                        <input type="radio" name="volveria_utilizar" value="no">
+                        No
+                    </label>
+                </div>
+    
+                <h2>Comentarios Adicionales</h2>
+                <textarea rows="5" name="comentarios_adicionales" placeholder="Escriba sus comentarios aquí"></textarea>
+    
+                <div class="terms-survey">
+                    <label for="acceptTermsSurvey">
+                        <input type="checkbox" id="acceptTermsSurvey" name="acceptTermsSurvey" required>
+                        He leído y acepto los <a href="terminos-y-condiciones.html" target="_blank">términos y condiciones</a> y la <a href="politica-privacidad.html" target="_blank">política de privacidad</a>.
+                    </label>
+                </div>
+    
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!--Fin de Encuesta-->
+
+    <footer>
+        <div class="container footer__container">
+            <ul class="footer__menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Nosotros</a></li>
+                <li><a href="index.html">Servicios</a></li>
+                <li><a href="index.html">Identidad</a></li>
+                <li class="nav__item--has-submenu">
+                    <a href="#">Servicio al Cliente</a>
+                    <ul class="nav__submenu">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="pqrs.html">PQRS</a></li>
+                        <li><a href="encuesta.html">Encuesta</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">FAQ</a></li>
+            </ul>
+            <ul class="footer__socials">
+                <li><a href="https://instagram.com/" target="_blank"><i class='bx bxl-instagram-alt'></i></a></li>
+                <li><a href="https://web.whatsapp.com/" target="_blank"><i class='bx bxl-whatsapp'></i></a></li>
+                <li><a href="mailto:servicio.globaltalent@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a></li>
+            </ul>
+            <ul class="footer__legal">
+                <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+                <li><a href="politicas-cookies.html">Política de Cookies</a></li>
+                <li><a href="terminos-uso.html">Términos de Uso</a></li>
+                <li><a href="terminos-servicio.html">Términos de Servicio</a></li>
+            </ul>
+        </div>
+        <div class="footer__copyright">
+            <small>2024 Global Talent &copy; Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <!--Fin de Footer-->
+
+    <div class="chatbot-container">
+        <div id="chatbotButton" class="chatbot-button">
+            <i class='bx bxs-chat'></i> Chat Bot
+        </div>
+        <div id="chatbotPanel" class="chatbot-panel">
+            <div class="chatbot-header">
+                <span>Chat Bot | Global Talent</span>
+                <i class='bx bx-x' id="closeChat"></i>
+            </div>
+            <div class="chatbot-body">
+                <div id="chatMessages" class="chat-messages"></div>
+                <input type="text" id="chatInput" placeholder="Escribe un mensaje...">
+            </div>
+        </div>
+    </div>
+    <!-- Fin de Botón de Chat Bot y Panel -->
+
+    <script src="mix/dist/mixitup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
