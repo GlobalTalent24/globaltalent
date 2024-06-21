@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo-nuevo.png" type="image/png">
+    <title>Global Talent</title>
+    <!--Icons CDN-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Google Fonts & Oufit-->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <!--Swiper JS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+    <nav>
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/logo-nuevo.png" alt="Navbar Logo">
+            </a>
+            <ul class="nav__menu">
+                <button class="nav__toggle-close"><i class='bx bx-x'></i></button>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li class="nav__item--has-submenu">
+                    <a href="#">Servicio al Cliente</a>
+                    <ul class="nav__submenu">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="pqrs.html">PQRS</a></li>
+                        <li><a href="encuesta.html">Encuesta</a></li>
+                    </ul>
+                </li>
+                <li><a href="#identidad">Identidad</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav__buttons">
+                <!--<button class="nav__toggle-theme-btn"><i class='bx bx-moon'></i></button>-->
+                <button class="nav__toggle-open"><i class='bx bx-menu'></i></button>
+            </div>
+        </div>
+    </nav>
+    <!--Fin De Nav-->
+    
+
+    <header>
+        <div class="container header__container">
+            <article class="header__image">
+                <div><img src="assets/header3.jpg" alt="Header Image"></div>
+            </article>
+            <article class="header__content">
+                <h4>Bienvenidos a <span>Global Talent</span>. Un servicio único</h4>
+                <h1>Asesoramos<br>con calidad</h1>
+                <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit autem quibusdam suscipit, 
+                harum nam vitae eligendi nulla dolores perferendis obcaecati. Molestiae dignissimos sint 
+                laboriosam accusamus sed corporis ex in nam.</p> -->
+                <div class="header__cta">
+                    <!--<a href="#contact" class="btn primary">Contratar</a> -->
+                    <a href="contacto.html" class="btn">Información</a>
+                </div>
+            </article>
+            <ul class="header__socials">
+                <li><a href="https://www.instagram.com/serv.global.t/?igsh=MXhmbHFpOWZsMDlqcg%3D%3D" target="_blank"><i class='bx bxl-instagram-alt'></i></a></li>
+                <li><a href="https://wa.me/+573105562130" target="_blank"><i class='bx bxl-whatsapp' ></i></a></li>
+                <li><a href="mailto:servicio.globaltalent@gmail.com" target="_blank"><i class='bx bxl-gmail' ></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <!--Fin De Header-->
+
+
+    <section class="about" id="nosotros">
+        <div class="container about__container">
+            <div class="about__image">
+                <img src="assets/about-principal.jpg" alt="About">
+            </div>
+            <div class="about__details">
+                <h1>Acerca de la empresa</h1>
+                <div class="about__grid">
+                    <article class="about__card">
+                        <i class='bx bx-rocket'></i>
+                        <h4>Misión</h4>
+                        <small>Brindar un servicio de asesoría estratégica a nuestros clientes, contribuyendo significativamente al 
+                        éxito y crecimiento de sus negocios.</small>
+                    </article>
+                    <article class="about__card">
+                        <i class='bx bx-bulb'></i>
+                        <h4>Visión</h4>
+                        <small>Ser líderes en soluciones administrativas innovadoras para el asesoramiento de nuestros clientes a 
+                        nivel regional, contribuyendo significativamente al crecimiento de su negocio. En el año 2025 seremos 
+                        reconocidos por nuestra precisión y excelencia.</small>
+                    </article>
+                    <article class="about__card">
+                        <i class='bx bx-badge-check'></i>
+                        <h4>Política</h4>
+                        <small><strong>Valores y excelencia:</strong><br>● Estableciendo estándares estrictos de calidad cumpliendo 
+                        con la normatividad.<br><br><strong>Honestidad y transparencia:</strong><br>● Valorando, practicando y 
+                        construyendo confianza y lealtad a los clientes.<br><br><strong>Protección de 
+                        datos:</strong><br>● Dando a conocer al cliente cómo serán utilizados sus datos.<br><strong><br>Igualdad e 
+                        inclusión:</strong><br>● Brindando un trato igualitario y digno a nuestros clientes.</small>
+                    </article>
+                    <article class="about__card">
+                        <i class='bx bx-target-lock'></i>
+                        <h4>Objetivos</h4>
+                        <small><strong>General:</strong><br>● Ofrecer asesoría estratégica y profesional a todas aquellas 
+                        empresas u organizaciones que requieran servicios administrativos de máxima calidad.<br><br><strong>
+                        Específicos:</strong><br>● Contribuir significativamente al éxito de todos los clientes.<br>● Facilitar el 
+                        crecimiento de los negocios de nuestros usuarios.</small>
+                    </article>
+                    <article class="about__card">
+                        <i class='bx bx-group'></i>
+                        <h4>Valores Corporativos</h4>
+                        <small><strong>Integridad:</strong><br>Actuamos con honestidad y ética en todas nuestras decisiones y 
+                        acciones.<br><br><strong>Compromiso:</strong><br>Nos dedicamos plenamente a cumplir con nuestras 
+                        responsabilidades y promesas hacia nuestros clientes y colaboradores.<br><br><strong>Sostenibilidad:</strong><br>Gestionamos 
+                        nuestros recursos de manera responsable para asegurar un impacto positivo a largo plazo en el medio 
+                        ambiente.<br><br><strong>Responsabilidad social:</strong><br>Contribuimos al bienestar de la comunidad 
+                        y apoyamos iniciativas que promuevan un impacto social positivo.<br><br><strong>Promesa de servicio:</strong><br>Garantizamos 
+                        ofrecer servicios de alta calidad, cumpliendo con las expectativas y necesidades de nuestros clientes.<br><br><strong>
+                        Equidad:</strong><br>Tratamos a todos nuestros empleados, clientes y socios de manera justa e inclusiva, 
+                        sin discriminación.</small>
+
+                    </article>
+                    <article class="about__card">
+                        <i class='bx bx-user-voice'></i>
+                        <h4>¿Quiénes somos?</h4>
+                        <small>Somos una empresa especializada en brindar asesoría estratégica dando soluciones administrativas a 
+                        los clientes, apoyando el crecimiento de sus negocios, guiándolos al éxito con integridad y compromiso con 
+                        estándares estrictos de equidad, honestidad, transparencia y responsabilidad para dar servicios de máxima 
+                        calidad, convirtiéndonos en líderes a nivel regional en asesoramiento con excelencia.</small>
+                    </article>
+                </div>
+                <a href="assets/15. TarjetaDePresentación.pdf" class="btn primary" id="openPdf">
+                    <i class='bx bx-cloud-download'></i> Ver / Descargar Manual
+                </a>
+            </div>
+        </div>
+    
+        <!-- Modal para la vista previa del PDF -->
+        <div id="pdfModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+    <!--Fin De About-->
+
+
+    <section class="services-section" id="servicios">
+        <div class="services-header">
+            <h1>Nuestro Servicio</h1>
+            <p>Descubre los detalles del servicio que ofrecemos</p>
+        </div>
+        <div class="services-content">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class='bx bx-briefcase-alt-2'></i>
+                </div>
+                <div class="service-info">
+                    <h3>Asesoramiento Estratégico</h3>
+                    <!--<h2>Contamos con 60 personas <span>disponibles</span>.</h2>-->
+                    <p>Detalles sobre el servicio de asesoramiento estratégico.</p>
+                    <a href="assets/Portafolio Global Talent.pdf" class="btn primary" id="openPdf">
+                        <i class='bx bx-cloud-download'></i> Ver / Descargar Portafolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal para vista previa de PDF -->
+        <div id="pdfModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe id="pdfIframe" src="" width="100%" height="500px"></iframe>
+            </div>
+        </div>
+    </section>    
+    <!--Fin De Servicios-->
+
+
+    <section class="projects" id="identidad">
+        <h1>Identidad</h1>
+        <p>En <span>Global Talent</span>, contamos con un equipo de profesionales dedicados en 
+        diversas áreas, cada uno desempeñando un papel vital en nuestros objetivos y en la 
+        entrega de soluciones innovadoras y de alta calidad. La colaboración, el compromiso 
+        y la excelencia nos guían. Conoce más sobre nuestro equipo y cómo trabajamos juntos 
+        para ayudarte a alcanzar el éxito.</p>
+        <div class="download-container">
+            <a href="assets/Organigrama Por Procesos - Global Talent.pdf" class="btn primary" id="openPdf">
+                <i class='bx bx-cloud-download'></i> Ver / Descargar Organigrama
+            </a>        
+        </div>
+        <ul class="projects__categories">
+            <li class="active" data-filter="*">Equipo Ejecutor</li>
+            <li data-filter=".gerencia">Gerencia</li>
+            <li data-filter=".recursoshumanos">Recursos Humanos</li>
+            <li data-filter=".serviciocliente">Servicio al Cliente</li>
+            <li data-filter=".documentacion">Documentación y Archivo</li>
+            <li data-filter=".marketing">Marketing</li>
+            <li data-filter=".ti">Tecnología</li>
+            <li data-filter=".serviciosventas">Servicio y Ventas</li>
+            <li data-filter=".logistica">Logística y Servicio</li>
+        </ul>
+
+        <div class="container projects__container">
+            <article class="project mix documentacion" data-order="1">
+                <div class="project__image">
+                    <img src="assets/andres-marin.jpg" alt="Project One">
+                </div>
+                <h3>Andrés Felipe Marín Atehortua</h3>
+                <p>Líder de Documentación y Archivo<p>
+            </article>
+            <article class="project mix documentacion" data-order="2">
+                <div class="project__image">
+                    <img src="assets/carmen-tipas.jpg" alt="Project Two">
+                </div>
+                <h3>Carmen Tipas Nastar</h3>
+                <p>Colaboradora de Documentación y Archivo</p>
+            </article>
+            <article class="project mix marketing" data-order="3">
+                <div class="project__image">
+                    <img src="assets/claudia-colorado.jpg" alt="Project Three">
+                </div>
+                <h3>Claudia Marcela Colorado Castaño</h3>
+                <p>Líder de Marketing</p>
+            </article>
+            <article class="project mix marketing" data-order="4">
+                <div class="project__image">
+                    <img src="assets/cristian-guzman.jpg" alt="Project Four">
+                </div>
+                <h3>Cristian Felipe Guzmán Marulanda</h3>
+                <p>Colaborador de Marketing</p>
+            </article>
+            <article class="project mix serviciosventas" data-order="5">
+                <div class="project__image">
+                    <img src="assets/camilo-muñoz.jpg" alt="Project Five">
+                </div>
+                <h3>Duvan Camilo Vera Muñoz</h3>
+                <p>Líder de Servicio y Ventas</p>
+            </article>
+            <article class="project mix recursoshumanos" data-order="6">
+                <div class="project__image">
+                    <img src="assets/eliana-ossa.jpg" alt="Project Six">
+                </div>
+                <h3>Eliana Ossa Serna</h3>
+                <p>Líder de Talento Humano</p>
+            </article>
+            <article class="project mix serviciosventas" data-order="7">
+                <div class="project__image">
+                    <img src="assets/jeferson-garcia.jpg" alt="Project Seven">
+                </div>
+                <h3>Jeferson Alejandro García Botero</h3>
+                <p>Colaborador de Servicio y Ventas</p>
+            </article>
+            <article class="project mix ti" data-order="8">
+                <div class="project__image">
+                    <img src="assets/alejandro-bedoya.jpg" alt="Project Eight">
+                </div>
+                <h3>Jhon Alejandro Bedoya Blandón</h3>
+                <p>Líder de Tecnología</p>
+            </article>
+            <article class="project mix serviciocliente" data-order="9">
+                <div class="project__image">
+                    <img src="assets/katherine-castaño.jpg" alt="Project Nine">
+                </div>
+                <h3>Katherine Castaño Alvarez</h3>
+                <p>Colaboradora de Servicio al Cliente</p>
+            </article>
+            <article class="project mix recursoshumanos" data-order="10">
+                <div class="project__image">
+                    <img src="assets/johana-rivera.jpg" alt="Project Ten">
+                </div>
+                <h3>Leidy Johana Rivera Amaya</h3>
+                <p>Colaboradora de Talento Humano</p>
+            </article>
+            <article class="project mix serviciocliente" data-order="11">
+                <div class="project__image">
+                    <img src="assets/luisa-mazo.jpg" alt="Project Eleven">
+                </div>
+                <h3>Luisa Fernanda Mazo Castañeda</h3>
+                <p>Líder de Servicio al Cliente</p>
+            </article>
+            <article class="project mix marketing" data-order="12">
+                <div class="project__image">
+                    <img src="assets/daniela-ramirez.jpg" alt="Project Twelve">
+                </div>
+                <h3>Maria Daniela Ramírez Valencia</h3>
+                <p>Colaboradora de Marketing</p>
+            </article>
+            <article class="project mix serviciocliente" data-order="13">
+                <div class="project__image">
+                    <img src="assets/marleny-rios.jpg" alt="Project Thirteen">
+                </div>
+                <h3>Marleny Ríos López</h3>
+                <p>Colaboradora de Servicio al Cliente</p>
+            </article>
+            <article class="project mix documentacion" data-order="14">
+                <div class="project__image">
+                    <img src="assets/sandra-milena.jpg" alt="Project Fourteen">
+                </div>
+                <h3>Sandra Milena González López</h3>
+                <p>Colaboradora de Documentación y Archivo</p>
+            </article>
+            <article class="project mix recursoshumanos" data-order="15">
+                <div class="project__image">
+                    <img src="assets/santiago-lopez.jpg" alt="Project Fifteen">
+                </div>
+                <h3>Santiago López Herrera</h3>
+                <p>Colaborador de Talento Humano</p>
+            </article>
+            <article class="project mix gerencia" data-order="16">
+                <div class="project__image">
+                    <img src="assets/santiago-ocampo.jpg" alt="Project Sixteen">
+                </div>
+                <h3>Santiago Ocampo López</h3>
+                <p>Gerente</p>
+            </article>
+            <article class="project mix serviciosventas" data-order="17">
+                <div class="project__image">
+                    <img src="assets/valeria-lloreda.jpg" alt="Project Seventeen">
+                </div>
+                <h3>Valeria Lloreda Renteria</h3>
+                <p>Colaboradora de Servicios y Ventas</p>
+            </article>
+            <article class="project mix logistica" data-order="18">
+                <div class="project__image">
+                    <img src="assets/veronica-hernandez.jpg" alt="Project Eighteen">
+                </div>
+                <h3>Veronica Hernández Castaño</h3>
+                <p>Líder de Logística y Servicio</p>
+            </article>
+            <article class="project mix logistica" data-order="19">
+                <div class="project__image">
+                    <img src="assets/viviana-rojas.jpg" alt="Project Nineteen">
+                </div>
+                <h3>Yuli Viviana Rojas Mapura</h3>
+                <p>Colaboradora de Logística y Servicio</p>
+            </article>
+        </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-button">&times;</span>
+                <embed src="assets/15. TarjetaDePresentación.pdf" type="application/pdf" width="100%" height="500px" />
+            </div>
+        </div>
+    </section>
+    <!--Fin De Identidad-->
+
+
+    <section class="swipe">
+        <h1>Nuestros Clientes</h1>
+        <p>En <span>Global Talent</span>, trabajamos con empresas de todos los tamaños y sectores, desde tecnología hasta 
+        servicios financieros. Nos enorgullece ofrecer asesoramiento estratégico y servicios administrativos 
+        personalizados que ayudan a nuestros clientes a crecer y mejorar su eficiencia operativa. Al confiar 
+        en nosotros, nuestros clientes no solo obtienen un proveedor de servicios, sino un socio estratégico 
+        comprometido con su éxito.</p>
+        <div class="swiper-wrapper">
+            <figure class="swiper-slide">
+                <figcaption>Descripcion del cliente</figcaption>
+                <div class="swiper__client">
+                    <div class="swiper__client-avatar">
+                        <img src="assets/avatar1.jpg" alt="Client One">
+                    </div>
+                    <div class="swiper__client-details">
+                        <h5>Melany Rojas</h5>
+                        <small>Nombre de la empresa</small>
+                    </div>
+                </div>
+            </figure>
+            <figure class="swiper-slide">
+                <figcaption>Descripcion del cliente</figcaption>
+                <div class="swiper__client">
+                    <div class="swiper__client-avatar">
+                        <img src="assets/avatar1.jpg" alt="Client One">
+                    </div>
+                    <div class="swiper__client-details">
+                        <h5>Melany Rojas</h5>
+                        <small>Nombre de la empresa</small>
+                    </div>
+                </div>
+            </figure>
+            <figure class="swiper-slide">
+                <figcaption>Descripcion del cliente</figcaption>
+                <div class="swiper__client">
+                    <div class="swiper__client-avatar">
+                        <img src="assets/avatar1.jpg" alt="Client One">
+                    </div>
+                    <div class="swiper__client-details">
+                        <h5>Melany Rojas</h5>
+                        <small>Nombre de la empresa</small>
+                    </div>
+                </div>
+            </figure>
+            <figure class="swiper-slide">
+                <figcaption>Descripcion del cliente</figcaption>
+                <div class="swiper__client">
+                    <div class="swiper__client-avatar">
+                        <img src="assets/avatar1.jpg" alt="Client One">
+                    </div>
+                    <div class="swiper__client-details">
+                        <h5>Melany Rojas</h5>
+                        <small>Nombre de la empresa</small>
+                    </div>
+                </div>
+            </figure>
+            <!--<figure class="swiper-slide">
+                <figcaption>Descripcion del cliente</figcaption>
+                <div class="swiper__client">
+                    <div class="swiper__client-avatar">
+                        <img src="assets/avatar1.jpg" alt="Client One">
+                    </div>
+                    <div class="swiper__client-details">
+                        <h5>Melany Rojas</h5>
+                        <small>Azafata</small>
+                    </div>
+                </div>
+            </figure>
+            <figure class="swiper-slide">
+                <figcaption>Descripcion del cliente</figcaption>
+                <div class="swiper__client">
+                    <div class="swiper__client-avatar">
+                        <img src="assets/avatar1.jpg" alt="Client One">
+                    </div>
+                    <div class="swiper__client-details">
+                        <h5>Melany Rojas</h5>
+                        <small>Azafata</small>
+                    </div>
+                </div>
+            </figure> -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+    <!--Fin de Testimonios-->
+
+
+    <section class="faq" id="faq">
+        <h1>Preguntas Frecuentes (FAQ)</h1>
+        <p>Encuentra respuestas a las preguntas más comunes</p>
+        <div class="container faq__container">
+            <div class="faq__item">
+                <button class="faq__question">¿Cuál es el horario de atención?</button>
+                <div class="faq__answer">
+                    <p>Atendemos de lunes a viernes de 8:00 AM a 5:00 PM.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">¿Dónde están ubicados?</button>
+                <div class="faq__answer">
+                    <p>Nuestra oficina principal está ubicada en la Cra. 8 26-79, Pereira, Colombia.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">¿Cómo puedo contactarlos?</button>
+                <div class="faq__answer">
+                    <p>Puedes contactarnos a través de nuestro correo de servicio: servicio.globaltalent@gmail.com
+                     o llamando al +57 310 556 213 0.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">¿Cuál es el tiempo de respuesta para una PQRS?</button>
+                <div class="faq__answer">
+                    <p>El tiempo de respuesta es de aproximadamente 15 días hábiles.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!--Fin de FAQ-->
+
+
+    <footer>
+        <div class="container footer__container">
+            <ul class="footer__menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#identidad">Identidad</a></li>
+                <li class="nav__item--has-submenu">
+                    <a href="">Servicio al Cliente</a>
+                    <ul class="nav__submenu">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="pqrs.html">PQRS</a></li>
+                        <li><a href="encuesta.html">Encuesta</a></li>
+                    </ul>
+                </li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <ul class="footer__socials">
+                <li><a href="https://www.instagram.com/serv.global.t/?igsh=MXhmbHFpOWZsMDlqcg%3D%3D" target="_blank"><i class='bx bxl-instagram-alt'></i></a></li>
+                <li><a href="https://wa.me/+573105562130" target="_blank"><i class='bx bxl-whatsapp'></i></a></li>
+                <li><a href="mailto:servicio.globaltalent@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a></li>
+            </ul>
+            <ul class="footer__legal">
+                <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                <li><a href="terminos-y-condiciones.html">Términos y Condiciones</a></li>
+                <li><a href="politicas-cookies.html">Política de Cookies</a></li>
+                <li><a href="terminos-uso.html">Términos de Uso</a></li>
+                <li><a href="terminos-servicio.html">Términos de Servicio</a></li>
+            </ul>
+        </div>
+        <div class="footer__copyright">
+            <small>2024 Global Talent &copy; Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <!--Fin de Footer-->
+    
+
+    <div id="cookieBanner" class="cookie-banner">
+        <p>Usamos cookies para mejorar su experiencia en nuestro sitio. 
+        Al continuar navegando, acepta nuestro uso de cookies. <a href="politicas-cookies.html">Leer más</a></p>
+        <button id="acceptCookies">Aceptar</button>
+    </div>
+    <!--Fin de Banner Cookies-->
+
+
+    <div class="chatbot-container">
+        <div id="chatbotButton" class="chatbot-button">
+            <i class='bx bxs-chat'></i> Chat Bot
+        </div>
+        <div id="chatbotPanel" class="chatbot-panel">
+            <div class="chatbot-header">
+                <span>Chat Bot | Global Talent</span>
+                <i class='bx bx-x' id="closeChat"></i>
+            </div>
+            <div class="chatbot-body">
+                <div id="chatMessages" class="chat-messages"></div>
+                <input type="text" id="chatInput" placeholder="Escribe un mensaje...">
+            </div>
+        </div>
+    </div>      
+    <!-- Fin de Botón de Chat Bot y Panel -->
+
+
+    <script src="mix/dist/mixitup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
