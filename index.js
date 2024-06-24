@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const pagination = document.querySelector('.swiper-pagination');
     let currentIndex = 0;
 
-    // bullets de paginación
+    // Crear bullets de paginación
     slides.forEach((slide, index) => {
         const bullet = document.createElement('div');
         bullet.classList.add('swiper-pagination-bullet');
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function updateSlider() {
-        const offset = -currentIndex * slides[0].offsetWidth;
+        const offset = -currentIndex * (slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight));
         swiperWrapper.style.transform = `translateX(${offset}px)`;
         document.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, index) => {
             bullet.classList.toggle('swiper-pagination-bullet-active', index === currentIndex);
@@ -131,6 +131,9 @@ document.addEventListener('DOMContentLoaded', function () {
         slideInterval = setInterval(autoSlide, 3000);
     });
 });
+
+
+
 
 
 

@@ -1936,41 +1936,14 @@ footer .footer__container {
 
     /* --- TESTIMONIOS - NUESTROS CLIENTES --- */
     .swipe {
-        width: 100%;
-        margin: 1rem auto;
-        padding: 0 1rem;
+        width: 95%;
     }
-
     .swiper-wrapper {
-        margin-top: 2rem;
-        padding-bottom: 2rem;
+        padding: 0 10%; 
     }
-
     .swiper-slide {
         flex: 0 0 80%; 
-        margin: 0 1rem; 
-    }
-
-    .swiper__client-avatar {
-        width: 4rem; 
-    }
-
-    .swiper__client-details h5 {
-        font-size: 1.2rem; 
-    }
-
-    .swiper__client-details small {
-        font-size: 1rem; 
-    }
-
-    .swiper-pagination {
-        padding-top: 0.5rem;
-    }
-
-    .swiper-pagination-bullet {
-        width: 12px;
-        height: 12px;
-        margin: 0 4px;
+        margin: 0 5px; 
     }
     
 
