@@ -808,6 +808,11 @@ body {
     opacity: 1;
 }
 
+.swipe span {
+    color: black;
+    font-weight: bold;
+}
+
 
 /* Contacto */
 section.contact {
@@ -1967,6 +1972,7 @@ footer .footer__container {
         height: 12px;
         margin: 0 4px;
     }
+    
 
     /* --- FAQ --- */
     .faq__container {

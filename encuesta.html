@@ -20,6 +20,7 @@
                 <img src="assets/logo-nuevo.png" alt="Navbar Logo">
             </a>
             <ul class="nav__menu">
+                <button class="nav__toggle-close"><i class='bx bx-x'></i></button>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html">Nosotros</a></li>
                 <li><a href="index.html">Servicios</a></li>
@@ -35,9 +36,8 @@
                 <li><a href="index.html">FAQ</a></li>
             </ul>
             <div class="nav__buttons">
-                <button class="nav__toggle-theme-btn"><i class='bx bx-moon'></i></button>
+                <!--<button class="nav__toggle-theme-btn"><i class='bx bx-moon'></i></button>-->
                 <button class="nav__toggle-open"><i class='bx bx-menu'></i></button>
-                <button class="nav__toggle-close"><i class='bx bx-x'></i></button>
             </div>
         </div>
     </nav>
@@ -193,6 +193,91 @@
         </div>
     </div>
     <!-- Fin de Botón de Chat Bot y Panel -->
+
+    <script>
+        // Chat Bot //
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotButton = document.getElementById('chatbotButton');
+            const chatbotPanel = document.getElementById('chatbotPanel');
+            const closeChat = document.getElementById('closeChat');
+            const chatMessages = document.getElementById('chatMessages');
+            const chatInput = document.getElementById('chatInput');
+
+            const welcomeMessage = "Bienvenido a Global Talent. ¿En que te podemos ayudar?";
+
+            chatbotButton.addEventListener('click', function() {
+                chatbotPanel.style.display = 'flex';
+                addMessage(welcomeMessage, 'bot');
+            });
+
+            closeChat.addEventListener('click', function() {
+                chatbotPanel.style.display = 'none';
+            });
+
+            chatInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    const userMessage = chatInput.value;
+                    addMessage(userMessage, 'user');
+                    chatInput.value = '';
+
+                    // Aquí puedes integrar la lógica de IA para responder al mensaje del usuario
+                    getBotResponse(userMessage);
+                }
+            });
+
+            function addMessage(message, sender) {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('chat-message', sender);
+                messageElement.textContent = message;
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function getBotResponse(userMessage) {
+                // Simulamos una respuesta del bot (aquí se integraría la lógica de IA)
+                const botMessage = "Esto es una respuesta automática. Estamos trabajando en tu solicitud.";
+                addMessage(botMessage, 'bot');
+            }
+        });
+
+        // Nav Toggle
+        const navMenu = document.querySelector('.nav__menu');
+        const navOpenBtn = document.querySelector('.nav__toggle-open');
+        const navCloseBtn = document.querySelector('.nav__toggle-close');
+        const navSubmenuToggles = document.querySelectorAll('.nav__item--has-submenu > a');
+
+        const openNavHandler = () => {
+            navMenu.classList.add('show');
+            navOpenBtn.style.display = 'none';
+            navCloseBtn.style.display = 'inline-block';
+        }
+
+        const closeNavHandler = () => {
+            navMenu.classList.remove('show');
+            navOpenBtn.style.display = 'inline-block';
+            navCloseBtn.style.display = 'none';
+
+            // Cerrar todos los submenús abiertos
+            const allSubmenus = document.querySelectorAll('.nav__submenu');
+            allSubmenus.forEach((submenu) => {
+                submenu.classList.remove('show');
+            });
+        }
+
+        const toggleSubmenuHandler = (event) => {
+            event.preventDefault();
+            const submenu = event.target.nextElementSibling;
+
+            // Alternar el submenú actual
+            submenu.classList.toggle('show');
+        }
+
+        navOpenBtn.addEventListener('click', openNavHandler);
+        navCloseBtn.addEventListener('click', closeNavHandler);
+        navSubmenuToggles.forEach(toggle => {
+            toggle.addEventListener('click', toggleSubmenuHandler);
+        });
+    </script>
 
     <script src="mix/dist/mixitup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

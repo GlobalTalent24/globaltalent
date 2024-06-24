@@ -20,6 +20,7 @@
                 <img src="assets/logo-nuevo.png" alt="Navbar Logo">
             </a>
             <ul class="nav__menu">
+                <button class="nav__toggle-close"><i class='bx bx-x'></i></button>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html">Nosotros</a></li>
                 <li><a href="index.html">Servicios</a></li>
@@ -35,9 +36,8 @@
                 <li><a href="index.html">FAQ</a></li>
             </ul>
             <div class="nav__buttons">
-                <button class="nav__toggle-theme-btn"><i class='bx bx-moon' ></i></button>
-                <button class="nav__toggle-open"><i class='bx bx-menu' ></i></button>
-                <button class="nav__toggle-close"><i class='bx bx-x'></i></button>
+                <!--<button class="nav__toggle-theme-btn"><i class='bx bx-moon'></i></button>-->
+                <button class="nav__toggle-open"><i class='bx bx-menu'></i></button>
             </div>
         </div>
     </nav>
@@ -293,14 +293,42 @@
             }
         });
 
-        // BOTON IMAGEN
-        document.getElementById('preview-button').addEventListener('click', function() {
-            var imagePreview = document.getElementById('image-preview');
-            if (imagePreview.classList.contains('hidden')) {
-                imagePreview.classList.remove('hidden');
-            } else {
-                imagePreview.classList.add('hidden');
-            }
+        // Nav Toggle
+        const navMenu = document.querySelector('.nav__menu');
+        const navOpenBtn = document.querySelector('.nav__toggle-open');
+        const navCloseBtn = document.querySelector('.nav__toggle-close');
+        const navSubmenuToggles = document.querySelectorAll('.nav__item--has-submenu > a');
+
+        const openNavHandler = () => {
+            navMenu.classList.add('show');
+            navOpenBtn.style.display = 'none';
+            navCloseBtn.style.display = 'inline-block';
+        }
+
+        const closeNavHandler = () => {
+            navMenu.classList.remove('show');
+            navOpenBtn.style.display = 'inline-block';
+            navCloseBtn.style.display = 'none';
+
+            // Cerrar todos los submenús abiertos
+            const allSubmenus = document.querySelectorAll('.nav__submenu');
+            allSubmenus.forEach((submenu) => {
+                submenu.classList.remove('show');
+            });
+        }
+
+        const toggleSubmenuHandler = (event) => {
+            event.preventDefault();
+            const submenu = event.target.nextElementSibling;
+
+            // Alternar el submenú actual
+            submenu.classList.toggle('show');
+        }
+
+        navOpenBtn.addEventListener('click', openNavHandler);
+        navCloseBtn.addEventListener('click', closeNavHandler);
+        navSubmenuToggles.forEach(toggle => {
+            toggle.addEventListener('click', toggleSubmenuHandler);
         });
     </script>
     <!-- Fin JS de Botón de Chat Bot y Panel -->
