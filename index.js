@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "¿Cuáles son sus horarios de atención?": "Nuestro horario de atención es de lunes a viernes de 8:00 AM a 5:00 PM.",
         "¿Dónde están ubicados?": "Estamos ubicados en la Cra 8. 26-79, Pereira.",
         "¿Qué servicios ofrecen?": "Ofrecemos un servicio único relacionado con el asesoramiento estratégico.",
-        "¿Cómo puedo contactar con Global Talent?": "Puedes contactar con nosotros enviando un correo servicio.globaltalent@gmail.com y llamando o escribiendo al +57 310 556 213 0."
+        "¿Cómo puedo contactar con Global Talent?": "Puedes contactar con nosotros enviando un correo servicio.globaltalent@gmail.com y llamando o escribiendo al +57 322 514 0928."
     };
 
     chatbotButton.addEventListener('click', function() {
